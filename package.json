@@ -1,0 +1,23 @@
+{
+  "name": "command_line_todo",
+  "version": "1.0.0",
+  "description": "Command line Todo List With Callbacks Edit",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pporche87/command_line_todo.git"
+  },
+  "author": "Patrick Porche <pporche87@gmail.com> (http://pporche87.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pporche87/command_line_todo/issues"
+  },
+  "homepage": "https://github.com/pporche87/command_line_todo#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
