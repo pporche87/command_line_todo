@@ -10,7 +10,7 @@ function list() {
 	console.log('              ')
 	console.log('ID Description')
 	console.log('-- -----------')
-	getTodos(function(error, todos) {
+	getTodos(function(error, todos, cb) {
 		if (error) throw error
 		formatTodos(todos)
 	})
