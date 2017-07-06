@@ -8,15 +8,17 @@ const DATA_STORE = './tasks.json'
 
 // Keep a clean test environment and separate data from dev
 //
-// For your test environment, use a separate data store so that you know you have a clean sample to work from (and aren't overwriting development data). You could wrap all this into it's own `test/` directory, e.g.:
+// For your test environment, use a separate data store so that you know you
+// have a clean sample to work from (and aren't overwriting development data).
+// You could wrap all this into it's own `test/` directory, e.g.:
 //
 // test/
 //   command_test.js
 //   tasks_data.json
 //
 
-// You should also try to separate your tests into _unit_ and _integration/behavior/end-to-end_ tests.
-
+// You should also try to separate your tests into _unit_ and
+// _integration/behavior/end-to-end_ tests.
 
 const list = require('./commands/list')
 const add = require('./commands/add')
@@ -49,7 +51,8 @@ describe('run', () => {
 		expect(done).to.be.a('function')
 	})
 
-	// This code that writes your data store is "setup" for the test, and should be wrapped in a Mocha before() hook: https://mochajs.org/#hooks
+	// This code that writes your data store is "setup" for the test, and should
+	// be wrapped in a Mocha before() hook: https://mochajs.org/#hooks
 
 	const data = []
 	data.push(
@@ -63,8 +66,12 @@ describe('run', () => {
 		console.log('New Todos Added')
 	})
 
-	// None of the below tests actually test the behavior of each command, they just test the response, which doesn't confirm anything other than that these functions return strings. Instead, they should test that each function has the right effect, e.g. a test for add() should actually test that a new task was added to the store
-
+	// None of the below tests actually test the behavior of each command, they
+	// just test the response, which doesn't confirm anything other than that
+	// these functions return strings. Instead, they should test that each
+	// function has the right effect, e.g. a test for add() should actually test
+	// that a new task was added to the store
+	
 	context('run()', () => {
     it('takes a command from bash and runs it through a function that parses the data and passes to a specific function', () => {
       expect(run('list') ).to.equal('list')

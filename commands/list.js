@@ -1,5 +1,6 @@
-// Here's how I'd refactor the below functions to create a better separation of concerns and to make formatTodos() more declarative (i.e. more obvious as to _why_ it's doing what it's doing):
-
+// Here's how I'd refactor the below functions to create a better separation of
+// concerns and to make formatTodos() more declarative (i.e. more obvious as to
+// _why_ it's doing what it's doing): 
 const getTodos = require('../get')
 
 function formatTodos(todos) {
@@ -28,8 +29,6 @@ function list() {
 		if (error) throw error
 		const incompleteTodos = todos.filter((todo) => !todo.done)
 
-		formatAndPrintTodos(incompleteTodos)
-	})
-}
+		formatAndPrintTodos(incompleteTodos) }) }
 
 module.exports = list
