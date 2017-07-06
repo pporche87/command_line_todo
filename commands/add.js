@@ -1,6 +1,5 @@
-const fs = require('fs')
 const getTodos = require('../get.js')
-const DATA_STORE = './tasks.json'
+const writeFile = require('../writeFile')
 
 function add(name, done=false, cb) {
 	getTodos((error, todos) => {
@@ -13,9 +12,10 @@ function add(name, done=false, cb) {
 		}
 		const newTodos = todos.concat({id, name, done})
 		const newTodosJson = JSON.stringify(newTodos)
-		fs.writeFile(DATA_STORE, newTodosJson, cb)
+		writeFile(newTodosJson)
 		console.log('Created task ' + id + '.')
 	})
+	return 'Add function ran'
 }
 
 module.exports = add

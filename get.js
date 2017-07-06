@@ -1,5 +1,4 @@
 const fs = require('fs')
-
 const DATA_STORE = './tasks.json'
 
 function getTodos(cb) {
@@ -8,6 +7,7 @@ function getTodos(cb) {
 		const todos = JSON.parse(data)
 		cb(null, todos)
 	})
+	return 'This function is running'
 }
 
 module.exports = getTodos
