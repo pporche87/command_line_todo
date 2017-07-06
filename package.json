@@ -4,7 +4,7 @@
   "description": "Command line Todo List With Callbacks Edit",
   "main": "task.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,10 @@
     "url": "https://github.com/pporche87/command_line_todo/issues"
   },
   "homepage": "https://github.com/pporche87/command_line_todo#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "chai": "^4.0.2",
+    "chai-change": "^2.1.2",
     "mocha": "^3.4.2"
   }
 }

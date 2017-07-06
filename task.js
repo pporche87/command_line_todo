@@ -2,17 +2,22 @@ const list = require('./commands/list')
 const add = require('./commands/add')
 const done = require('./commands/done')
 
-const command = process.argv[2]
-const todo = process.argv[3]
+let command = process.argv[2]
+let todo = process.argv[3]
 
-const run = () => {
+const run = (command, todo) => {
 	if (command === 'list') {
 		list(console.log)
+		return command
 	} else if (command === 'add') {
 		add(todo)
+		return command
 	} else if (command === 'done') {
 		done(todo)
+		return command
 	}
 }
 
-run()
+run(command, todo)
+
+module.exports = run

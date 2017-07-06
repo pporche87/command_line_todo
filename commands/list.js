@@ -1,7 +1,13 @@
 function formatTodos(todos) {
-	console.log(todos.map((todo, i) => `${todo.id}. ${todo.name}`).join('\n'))
+	let counter = 0
+	todos.forEach((todo) => {
+		if (todo.done === false) {
+			counter++
+			console.log(`${todo.id}. ${todo.name}`)
+		}
+	})
 	console.log('          ')
-	console.log(todos.length + ' tasks.')
+	console.log(counter + ' tasks.')
 	console.log('          ')
 }
 
@@ -14,6 +20,7 @@ function list() {
 		if (error) throw error
 		formatTodos(todos)
 	})
+	return 'List function ran'
 }
 
 module.exports = list
